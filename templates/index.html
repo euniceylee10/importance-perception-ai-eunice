@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importance Perception AI</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <h1>Importance Perception AI</h1>
+      <p>Explore how perceived importance, task structure, and cognitive load shape human prioritization.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Tasks</h2>
+      <div class="tasks-row">
+        <div class="task-section" id="personal-section">
+          <h3>Personal Tasks</h3>
+          <div id="personal-list" class="task-list"></div>
+          <div class="task-form">
+            <h4>Add personal task</h4>
+            <label>Title<input id="personal-title" placeholder="Taxes, grocery shopping" /></label>
+            <label>Due date<input id="personal-due" type="date" /></label>
+            <label>Urgency
+              <div class="urgency-options">
+                <label><input type="radio" name="personal-urgency" value="1" checked /> 🔥 Most urgent</label>
+                <label><input type="radio" name="personal-urgency" value="2" /> ⚠️ Medium</label>
+                <label><input type="radio" name="personal-urgency" value="3" /> 😌 Least urgent</label>
+              </div>
+            </label>
+            <button id="add-personal">Add personal task</button>
+          </div>
+        </div>
+
+        <div class="task-section" id="work-section">
+          <h3>Work Tasks</h3>
+          <div id="work-list" class="task-list"></div>
+          <div class="task-form">
+            <h4>Add work task</h4>
+            <label>Title<input id="work-title" placeholder="Prepare audit deck" /></label>
+            <label>Due date<input id="work-due" type="date" /></label>
+            <label>Urgency
+              <div class="urgency-options">
+                <label><input type="radio" name="work-urgency" value="1" checked /> 🔥 Most urgent</label>
+                <label><input type="radio" name="work-urgency" value="2" /> ⚠️ Medium</label>
+                <label><input type="radio" name="work-urgency" value="3" /> 😌 Least urgent</label>
+              </div>
+            </label>
+            <button id="add-work">Add work task</button>
+          </div>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button id="calendar-view" class="secondary">Calendar View</button>
+        <button id="map-analysis" class="secondary">MAP Analysis</button>
+      </div>
+    </section>
+
+    <section class="panel" id="results-panel">
+      <div class="placeholder-card">
+        <p>Select Calendar View or MAP Analysis to explore tasks, priorities, and benefits.</p>
+      </div>
+    </section>
+
+    <div id="benefits-popup" class="popup hidden">
+      <div class="popup-content">
+        <h3>Benefits of Using Importance Perception AI</h3>
+        <ul>
+          <li>Helps identify cognitive overload before burnout</li>
+          <li>Aligns perceived urgency with actual task demands</li>
+          <li>Reduces decision fatigue through structured prioritization</li>
+          <li>Improves work-life balance by highlighting strain points</li>
+        </ul>
+        <button id="close-benefits">Close</button>
+      </div>
+    </div>
+
+    <div id="task-benefit-popup" class="popup hidden">
+      <div class="popup-content">
+        <h3 id="task-benefit-title">Task benefit</h3>
+        <p id="task-benefit-text"></p>
+        <button id="close-task-benefit">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>

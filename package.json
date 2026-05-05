@@ -1,0 +1,12 @@
+{
+  "name": "importance-perception-ai",
+  "version": "1.0.0",
+  "description": "A JavaScript demo of Importance Perception AI with a live web UI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
